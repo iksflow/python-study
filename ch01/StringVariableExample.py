@@ -49,3 +49,37 @@ center = "{0:^10}".format("hi")
 print(center)
 otherSpam = "{0:!^10}".format("hi")
 print(otherSpam)
+
+format1 = "I eat {0} apples".format(3)
+print(format1)
+
+format2 = "I eat {0} apples".format("five")
+print(format2)
+
+format3 = "I ate {number} apples. so I was sick for {day} days."
+
+print(format3.format(number=10, day=3))
+
+name = "sam"
+age = 30
+format4 = f"My name is {name}. Age is {age}."
+
+print(format4)
+
+print(format4.count("is"))
+
+find1 = "ABCDEFG"
+print("find : index of B = ", find1.find("B"))
+print("find : index of Q = ", find1.find("Q"))
+
+index1 = "ABCDEFG"
+print("index : index of B = ", index1.index("B"))
+# print("index : index of Q = ", index1.index("Q"))   # error
+
+join1 = "QWERTY"
+print(",".join(join1))
+join2 = ['1', '2', '3', '4']
+print(",".join(join2))
+
+lower = "ABCD"
+print(lower.lower())
