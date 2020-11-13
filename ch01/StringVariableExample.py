@@ -83,3 +83,17 @@ print(",".join(join2))
 
 lower = "ABCD"
 print(lower.lower())
+
+strip = "{0:^10}".format("ABC")
+print(strip.strip())
+
+lstrip = "{0:^10}".format("ABC")
+print(lstrip.lstrip())
+
+rstrip = "{0:^10}".format("ABC")
+print(rstrip.rstrip())
+
+a = "Life is too short"
+print(a.replace("Life", "Your leg"))
+
+print(a.split())
