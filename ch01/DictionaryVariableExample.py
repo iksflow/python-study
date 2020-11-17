@@ -20,4 +20,34 @@ dic4 = {(1,2):'a'}
 print("dic4 : ", dic4)
 
 # 딕셔너리 관련 함수들
+dic5 = {'name': 'iksflow', 'phone': '01012345678', 'birth': '1117'}
+print('dic5 : ', dic5)
+
+# keys() 함수는 dict_keys객체를 반환한다.
+print('dic5.keys() = ', dic5.keys())
+
+for key in dic5.keys():
+    print('key = ', key)
+
+# dict_keys객체를 리스트로 변환
+print('list(dic5.keys()) = ', list(dic5.keys()))
+
+# values()를 사용해 dict_values 객체 얻기
+print('dic5.values() = ', dic5.values())
+
+# items()를 사용해 dict_items 객체 얻기
+print('dic5.items() = ', dic5.items())
+
+# 딕셔너리 모두 지우기
+dic6 = {'name': 'iksflow', 'phone': '01012345678', 'birth': '1117'}
+dic6.clear()
+print('dic6 = ', dic6)
+
+# get함수로 value 얻기
+dic7 = {'name': 'iksflow', 'phone': '01012345678', 'birth': '1117'}
+print('dic7.get("name") = ', dic7.get("name"))
+
+# 특정 key가 포함되어있는지 확인하기
+print('"name" in dic7 : ', 'name' in dic7)
+
 
