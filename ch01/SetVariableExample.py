@@ -18,16 +18,34 @@ print("s1 : ", t1)
 
 # 집합의 연산 (교집합, 합집합, 차집합)
 
-# 교집합
+# 교집합 : '&' 또는 intersection 을 통해 구할 수 있다.
 s4 = set([1, 2, 3, 4, 5, 6])
 s5 = set([4, 5, 6, 7, 8, 9])
 print("s4 & s5 = ", s4 & s5)
 print("s4.intersection(s5) = ", s4.intersection(s5))
 
-# 합집합
+# 합집합 : '|' 또는 union 을 통해 구할 수 있다.
 print("s4 | s5 = ", s4 | s5)
 print("s4.union(s5) = ", s4.union(s5))
 
-# 차집합
+# 차집합 : '-' 또는 difference 를 통해 구할 수 있다.
 print("s4 - s5 = ", s4 - s5)
 print("s4.difference(s5) = ", s4.difference(s5))
+
+
+# 집합 자료형과 관련된 함수들
+
+# add : 값 추가하기.
+s6 = set([1, 2, 3])
+s6.add(4)
+print("s6.add(4) = ", s6)
+
+# update : 값 여러개 추가하기.
+s7 = set([1, 2, 3])
+s7.update([4, 5, 6])
+print("s7.update([4, 5, 6]) = ", s7)
+
+# remove : 값 제거하기.
+s8  =set([1, 2, 3])
+s8.remove(3)
+print("s8.remove(3) = ", s8)
