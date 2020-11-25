@@ -29,3 +29,8 @@ print("1 in list = ", 1 in list)
 tuple = (1, 2, 3)
 print("4 in tuple = ", 4 in tuple)
 print("4 not in tuple = ", 4 not in tuple)
+
+# 반복문
+
+# while
+# for
