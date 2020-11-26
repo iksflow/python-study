@@ -17,12 +17,18 @@ if money >= 3000 or card:
     print("택시를 타자")
 else:
     print("걸어가~")
-
-if (money >= 3000) | card:
+# elif 를 통해 추가 조건을 정의할 수 있다.
+if money >= 3000:
     print("택시를 타자2")
+elif card:
+    print("카드가 있으니 타자")
 else:
     print("걸어가~2")
 
+# 조건부 표현식을 사용해 조건문을 한줄로 표현하기
+score = 60
+mesage = "success" if score >= 60 else "failure"
+print("message = ", mesage)
 # in, not in
 list = [1, 2, 3]
 print("1 in list = ", 1 in list)
@@ -34,3 +40,4 @@ print("4 not in tuple = ", 4 not in tuple)
 
 # while
 # for
+# for 1 in [1, 2, 3, 4]
