@@ -39,3 +39,8 @@ def print_kwargs(**kwargs):
 
 print_kwargs(a=1)
 print_kwargs(name='foo', age=3)
+
+# 람다 사용하기 return 명령어가 없어도 값을 반환한다는 특징이 있다.
+add_lambda = lambda a,b: a + b
+result = add_lambda(3,4)
+print("add_lambda(3,4) = ", result)
