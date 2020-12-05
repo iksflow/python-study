@@ -9,3 +9,5 @@ print("input b = ", b)
 c = []
 c.append(1)
 print("c = ", c)
+
+
