@@ -31,3 +31,7 @@ except ZeroDivisionError:
     print("ZeroDivisionError 발생")
 finally: 
     print("Finally블록 수행")
+
+# raise로 오류 강제 발생시키기. Java의 throw같은것
+
+raise NotImplementedError
