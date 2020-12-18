@@ -32,6 +32,15 @@ except ZeroDivisionError:
 finally: 
     print("Finally블록 수행")
 
+# pass 를 통해 오류 건너뛰기
+
+try:
+    print(4 / 0)
+except ZeroDivisionError:
+    print("오류 건너뜁니다.")
+    pass
+
+
 # raise로 오류 강제 발생시키기. Java의 throw같은것
 
 raise NotImplementedError
