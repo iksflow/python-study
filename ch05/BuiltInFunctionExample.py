@@ -92,3 +92,9 @@ print(min('python'))
 print(oct(9))
 
 # open(filename, [mode])
+
+# ord(c) 아스키코드 값을 반환한다.
+print(ord('c'))
+
+# pow(x, y) x의 y제곱을 반환한다
+print(pow(3, 4))
