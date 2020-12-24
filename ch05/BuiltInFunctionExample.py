@@ -98,3 +98,49 @@ print(ord('c'))
 
 # pow(x, y) x의 y제곱을 반환한다
 print(pow(3, 4))
+
+# range([start], stop, [step]) start[시작숫자], stop[끝숫자], step[증감치]를 의미한다.
+
+# 인수가 1개인 경우는 0부터 시작한다
+print(list(range(5)))
+
+# 인수가 2개인 경우는 start부터 stop까지를 의미한다.
+print(list(range(5, 10)))
+
+# 인수가 3개인 경우 start부터 stop까지 step만큼 거리가 있는 숫자들을 의미한다.
+print(list(range(0, -10, -1)))
+
+# round(number[, ndigits]) ndigits는 생략 가능하다. ndigits는 표시하고싶은 소수점 자릿수이다.
+print(round(4.6666))
+print(round(4.6666, 2))
+
+# sorted(iterable) 입력값을 정렬해서 결과를 리스트로 반환한다. type으로 검사해도 list로 반환한다.
+# sorted와 list의 sort의 차이는 반환값이 다르다. sorted()는 list를 반환하는 반면 list.sort()는 None을 반환한다.
+# 기본적으로 오름차순 정렬을 한다.
+list1 = list(range(3, -3, -1))
+list2 = list(range(3, -3, -1))
+
+print(list1)
+print(list2)
+print(sorted(list1))
+print(list2.sort())
+print(list2)
+
+# str(object) 문자열 형태로 객체를 변환해서 반환한다.
+print(str(3))
+print(str('hi'))
+print(str('hi'.upper()))
+print(str(list1))
+
+# sum(iterable)은 반복 가능한 자료형을 입력받아 튜플로 바꿔준다.
+print(tuple('hi python'))
+print(tuple([1, 2, 3]))
+
+# type(object) 자료형이 무엇인지 알려준다
+print(type('string'))
+print(type(None))
+print(type((1,)))
+
+# zip(iterable) 동일한 개수로 이루어진 자료형을 묶는다.
+print(list(zip((1, 2, 3), (4, 5, 6))))
+print(list(zip((1, 2, 3), (4, 5, 6), (7, 8, 9))))
