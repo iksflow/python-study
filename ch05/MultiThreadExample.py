@@ -14,6 +14,8 @@ for i in range(5):
 
 for t in threads:
     t.start()
+    # start와 동시에 join을 하면 현재 루프에서의 t가 끝날떄까지 기다리게되므로 multithread의 이점을 살리지 못하게됨.
+    # t.join()
 for t in threads:
     t.join()
 
