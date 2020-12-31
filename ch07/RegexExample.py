@@ -63,3 +63,7 @@ print(m)
 p = re.compile("a.b", re.DOTALL)
 m = p.match("a\nb")
 print(m)
+
+# IGNORECASE, I
+p = re.compile("[a-z]", re.IGNORECASE)
+print(p.match("python"))
