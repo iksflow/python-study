@@ -65,5 +65,34 @@ m = p.match("a\nb")
 print(m)
 
 # IGNORECASE, I
-p = re.compile("[a-z]", re.IGNORECASE)
-print(p.match("python"))
+p = re.compile("[a-z]*", re.IGNORECASE)
+print(p.match("python").group())
+print(p.match("PYTHON").group())
+
+# MULTILINE, M
+p = re.compile("^python\s\w+", re.MULTILINE)
+data = """python one
+life is too short
+python two
+you need python
+python three"""
+
+print(p.findall(data))
+
+# VERBOSE, X
+charref = re.compile(r'&[#](0[0-7]+|[0-9]+|x[0-9a-fA-F]+);')
+
+# VERBOSE를 사용하면 정규표현식을 여러 행으로 나타낼 수 있을 뿐만아니라, 주석을 통해 코멘트를 남길 수 있다.
+charref = re.compile(r"""
+    &[#]                # Start of a numeric entity reference
+    (
+        0[0-7]+         # Octal form
+       |[0-9]+          # Decimal form
+       |x[0-9a-fA-F]+   # Hexadecimal form
+    )
+    ;   
+""", re.VERBOSE)
+
+# Raw string
+p = re.compile(r'\\section')
+print(p.match('\section').group())
