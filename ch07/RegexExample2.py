@@ -59,3 +59,12 @@ p = re.compile(r"(?P<name>\w+)\s+(?P<phone>(\d+)[-]\d+[-]\d+)")
 
 print(p.sub("\g<phone> \g<name>", "park 010-1234-1234"))
 print(p.sub("\g<2> \g<1>", "park 010-1234-1234"))
+
+# Greedy 조건을 만족하는 최대의 값을 반환한다. <html>의 '<' 부터 </title>의 '>'까지가 범위이다. </title로 변경하면 그 전인 <title>의 '>'까지가 범위이다.
+s = '<html><head><title>Title</title>'
+print(len(s))
+print(re.match('<.*>', s).span())
+print(re.match('<.*>', s).group())
+
+# Non-Greedy 가장 처음 조건을 충족하는 대상만을 반환함. 따라서 <html> 만 매치된다.
+print(re.match('<.*?>', s).group())
