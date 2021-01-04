@@ -38,10 +38,10 @@ print(fibonaci(5))
 # 65,45,2,3,45,8
 listStr = '65,45,2,3,45,8'
 list = listStr.split(',')
-sum = 0
+sum1 = 0
 for i in range(len(list)):
-    sum += int(list[i])
-print('sum =', sum)
+    sum1 += int(list[i])
+print('sum1 =', sum1)
 
 # Q7. 한 줄 구구단 - 2~9의 숫자 중 하나를 입력받아 구구단 출력하기
 def gugu(n):
@@ -76,7 +76,7 @@ f.write(data)
 f.close()
 
 f = open('C:/Users/iksflow/PycharmProjects/python-study/ch08/sample.txt', 'r')
-sum = 0
+sum1 = 0
 # print('readline=', f.readline())
 # print('readline=', f.readline())
 # print('readline=', f.readline())
@@ -94,5 +94,22 @@ sum = 0
 # while f.readable():
 #     print('readline=', f.readline())
     # sum += int(f.readline())
-print(sum)
+print(sum1)
 f.close()
+
+# Q10. 사칙연산 계산기
+class Calculator:
+    def __init__(self, elements):
+        self.elements = elements
+    def sum(self):
+        return sum(self.elements)
+    def avg(self):
+        return sum(self.elements) / len(self.elements)
+
+cal = Calculator([1, 2, 3, 4, 5])
+
+print(cal.elements)
+print(cal.sum())
+print(cal.avg())
+
+# Q11. 모듈 사용방법
