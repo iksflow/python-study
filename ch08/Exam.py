@@ -113,3 +113,61 @@ print(cal.sum())
 print(cal.avg())
 
 # Q11. 모듈 사용방법
+
+# Q12. 오류와 예외 처리
+print("Q12")
+result12 = 0
+try:
+    [1, 2, 3][3]
+    "a"+1
+    4 / 0
+except TypeError:
+    result12 += 1
+except ZeroDivisionError:
+    result12 += 2
+except IndexError:
+    result12 += 3
+finally:
+    result12 += 4
+print(result12)
+
+# Q13. DashInsert 함수
+def DashInsert(str):
+    result = ''
+    for i in range(len(str)):
+        if i == 0:
+            result += str[i]
+            continue
+        if (int(result[-1]) & 1) == (int(str[i]) & 1):
+            if (int(str[i]) & 1 == 0):
+                result += '*' + str[i]
+            else:
+                result += '-' + str[i]
+        else:
+            result += str[i]
+    return result
+
+str13 = '4546793'
+print(DashInsert(str13))
+
+# Q14. 문자열 압축하기 문자열을 입력받아 같은 문자가 반복되는 경우 반복횟수를 표시해 압축하라
+def ZipFunction(text):
+    result = ''
+    last = ''
+    count = 1
+    for i in range(len(text)):
+        if (i == 0):
+            last = text[i]
+            continue
+        if (last == text[i]):
+            count += 1
+        else:
+            result += last + str(count)
+            last = text[i]
+            count = 1
+        if (i == len(text) - 1):
+            result += last + str(count)
+
+    return result
+str14 = 'aaabbcccccca'
+print(ZipFunction(str14))
