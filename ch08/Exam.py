@@ -171,3 +171,16 @@ def ZipFunction(text):
     return result
 str14 = 'aaabbcccccca'
 print(ZipFunction(str14))
+
+# Q15. Duplicate Numbers - 0~9의 숫자로 이루어진 문자를 입력받았을 때, 중복된 숫자가 존재하는지 확인하는 함수를 작성하시오
+def checkDup(str):
+    checker = [False] * 10
+    for i in range(len(str)):
+        if checker[int(str[i])] == True:
+            return False
+        else:
+            checker[int(str[i])] = True
+
+    return True
+
+print(checkDup('0123456789'))
