@@ -184,3 +184,41 @@ def checkDup(str):
     return True
 
 print(checkDup('0123456789'))
+
+# Q16. 모스 부호 해독 - 문자열 형식으로 입력받은 모스 부호를 해독하여 영어 문장으로 출력하는 프로그램을 작성하라
+morseMap = {
+    '.-':'A',
+    '-...':'B',
+    '-.-.':'C',
+    '-..':'D',
+    '.':'E',
+    '..-.':'F',
+    '--.':'G',
+    '....':'H',
+    '..':'I',
+    '.---':'J',
+    '-.-':'K',
+    '.-..':'L',
+    '--':'M',
+    '-.':'N',
+    '---':'O',
+    '.--.':'P',
+    '--.-':'Q',
+    '.-.':'R',
+    '...':'S',
+    '-':'T',
+    '..-':'U',
+    '...-':'V',
+    '.--':'W',
+    '-..-':'X',
+    '-.--':'Y',
+    '--..':'Z',
+}
+def morseInterpreter(str):
+    codes = str.split(' ')
+    result = ''
+    for i in range(len(codes)):
+        result += morseMap.get(codes[i])
+    return result
+str = '.... . ... .-.. . . .--. ... . .- .-. .-.. -.--'
+print(morseInterpreter(str))
